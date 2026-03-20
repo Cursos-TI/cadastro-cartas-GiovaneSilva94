@@ -81,6 +81,68 @@ int main () {
     printf("Densidade Populacional: %.2f hab/km²\n",densidade2);
     printf("PIB per capita: %.2f\n", pibPercapita2 );
     
+    int opcao;
+
+printf("\nEscolha o atributo para comparar:\n");
+printf("1 - Populacao\n");
+printf("2 - Area\n");
+printf("3 - PIB\n");
+printf("4 - Densidade Populacional\n");
+printf("5 - PIB per capita\n");
+scanf("%d", &opcao);
+
+switch(opcao) {
+    case 1:
+        if (carta1.populacao > carta2.populacao)
+            printf("Carta 1 venceu!\n");
+        else if (carta2.populacao > carta1.populacao)
+            printf("Carta 2 venceu!\n");
+        else
+            printf("Empate!\n");
+        break;
+
+    case 2:
+        if (carta1.area > carta2.area)
+            printf("Carta 1 venceu!\n");
+        else if (carta2.area > carta1.area)
+            printf("Carta 2 venceu!\n");
+        else
+            printf("Empate!\n");
+        break;
+
+    case 3:
+        if (carta1.pib > carta2.pib)
+            printf("Carta 1 venceu!\n");
+        else if (carta2.pib > carta1.pib)
+            printf("Carta 2 venceu!\n");
+        else
+            printf("Empate!\n");
+        break;
+
+    case 4:
+        if (densidade1 < densidade2)
+            printf("Carta 1 venceu!\n");
+        else if (densidade2 < densidade1)
+            printf("Carta 2 venceu!\n");
+        else
+            printf("Empate!\n");
+        break;
+
+    case 5:
+        if (pibPerCapita1 > pibPercapita2)
+            printf("Carta 1 venceu!\n");
+        else if ( pibPercapita2> pibPerCapita1)
+            printf("Carta 2 venceu!\n");
+        else
+            printf("Empate!\n");
+        break;
+
+    default:
+        printf("Opcao invalida!\n");
+}
+
+
+
     return 0;
 
 }
